@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+.profile-image {
+    width: 100px; /* Kích thước hình ảnh */
+    height: 100px; /* Kích thước hình ảnh */
+    border-radius: 50%; /* Làm cho hình ảnh hình tròn */
+}
+
+.add-link {
+    display: inline-block;
+    margin-top: 20px; /* Khoảng cách với tiêu đề */
+    color: #007BFF; /* Màu của liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.add-link:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.info-box {
+    margin-top: 40px; /* Khoảng cách với phần trên */
+    padding: 15px;
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo tròn các góc */
+    background-color: #f9f9f9; /* Màu nền */
+}
+
+.info-box h2 {
+    margin: 0; /* Bỏ khoảng cách cho tiêu đề */
+}
+
+.weekly-image {
+    width: 50px; /* Kích thước hình ảnh */
+    height: 50px; /* Kích thước hình ảnh */
+    border-radius: 50%; /* Làm cho hình ảnh hình tròn */
+}
+.activity-link, .my-learning-link {
+    margin-left: auto;
+    text-align: right;
+}
+.tabs {
+    display: flex;
+    margin-top: 20px;
+}
+.tab {
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.tab:hover {
+    background-color: #e0e0e0;
+}
+
+.activity-link, .my-learning-link {
+    margin-left: auto;
+    text-align: right;
+}
+.tabs {
+    display: flex;
+    margin-top: 20px;
+}
+.tab {
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.tab:hover {
+    background-color: #e0e0e0;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.card {
+    flex: 1; /* Làm cho các thẻ có chiều rộng bằng nhau */
+    margin: 0 10px; /* Khoảng cách giữa các thẻ */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex; /* Sử dụng flexbox để đặt hình ảnh bên trái */
+    align-items: center; /* Căn giữa hình ảnh và văn bản */
+}
+.card img {
+    max-width: 100px; /* Đặt chiều rộng tối đa cho hình ảnh */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+.card:hover {
+    background-color: #e0e0e0;
+}
+.divider {
+    height: 2px; /* Độ dày của đường kẻ */
+    background-color: #ccc; /* Màu của đường kẻ */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+}
