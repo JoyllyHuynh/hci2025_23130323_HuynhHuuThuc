@@ -1,427 +1,271 @@
 body {
-  background: url('https://cdn.wallpapersafari.com/83/87/homjEO.jpg');
-  background-size: cover; /* Làm cho ảnh nền phủ toàn bộ */
-  background-position: center; /* Căn giữa ảnh nền */
-  background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-y: hidden; /* Ngăn cuộn ngang */
-}
-
-.container {
-  background-color: #1e1e1e;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  width: 300px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: whitesmoke;
-}
-
-.input-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #ffffff;
-}
-
-input:focus {
-  outline: none;
-  background-color: #444;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: black;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: black;
-} 
-
-.message a {
-  color: gray;                /* Đặt màu chữ là trắng */
-  text-decoration: none;       /* Loại bỏ gạch chân */
-}
-
-.message a:hover {
-  color: #d3d3d3;              /* Thay đổi màu khi di chuột (màu cam) */
-}
-
-
-.welcome-container {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-    position: fixed; /* Đặt vị trí cố định */
-    left: 0;
-    top: 0;
-    width: 200px; /* Chiều rộng thanh bên trái */
-    height: 100vh; /* Chiều cao 100% */
-    background-color: rgba(30, 30, 30, 0.8);
-    padding: 20px;
-    border-right: 5px solid #d3d3d3; /* Đường viền bên phải thanh */
-    z-index: 10; /* Đảm bảo thanh nằm trên cùng */
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1; /* Cho phép danh sách mở rộng để chiếm không gian */
-}
-
-.sidebar ul li {
-  margin: 0;
-}
-
-.sidebar ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 15px 20px;
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.sidebar ul li a:hover {
-  background-color: rgba(211, 211, 211, 0.5); /* Hiệu ứng khi hover */
-}
-
-.main-content {
-  margin-left: 220px; /* Đẩy nội dung chính sang bên phải để tránh che bởi sidebar */
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  height: 100%; /* Đảm bảo chiều cao 100% */
-}
-
-.sidebar ul li a.account-icon {
-  font-size: 25px; /* Kích thước chữ lớn hơn cho biểu tượng */
-  text-align: center; /* Căn giữa nội dung */ 
-  padding: 10px; /* Khoảng cách xung quanh */
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  color: #ffffff; /* Màu chữ */
-  background-color: rgba(30, 30, 30, 0.8); /* Màu nền */
-  border-radius: 50%; /* Hình tròn */
-  width: 40px; /* Độ rộng của nút */
-  height: 40px; /* Độ cao của nút */
-  line-height: 40px; /* Căn giữa nội dung theo chiều dọc */
-  transition: background-color 0.3s; /* Hiệu ứng khi hover */
-}
-
-.sidebar ul li a.account-icon:hover {
-  background-color: rgba(211, 211, 211, 0.5); /* Hiệu ứng hover màu trắng xám */
-}
-
-.exercise-container {
-  position: fixed; /* Đặt vị trí cố định */
-  left: 0;
-  top: 0;
-  width: 200px; /* Chiều rộng thanh bên trái */
-  height: 100vh; /* Chiều cao 100% */
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 20px;
-  border-right: 5px solid #d3d3d3; /* Đường viền bên phải thanh */
-  z-index: 10; /* Đảm bảo thanh nằm trên cùng */
-}
-
-.exercise-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1; /* Cho phép danh sách mở rộng để chiếm không gian */
-}
-
-.exercise-container ul li {
-  margin: 0;
-}
-
-.exercise-container ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 15px 20px;
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.exercise-container ul li a:hover {
-  background-color: rgba(211, 211, 211, 0.5); /* Hiệu ứng khi hover */
-}
-
-.main-content {
-  margin-left: 220px; /* Đẩy nội dung chính sang bên phải để tránh che bởi sidebar */
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  height: 100%; /* Đảm bảo chiều cao 100% */
-}
-
-.exercise-container ul li a.account-icon {
-  font-size: 25px; /* Kích thước chữ lớn hơn cho biểu tượng */
-  text-align: center; /* Căn giữa nội dung */ 
-  padding: 10px; /* Khoảng cách xung quanh */
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  color: #ffffff; /* Màu chữ */
-  background-color: rgba(30, 30, 30, 0.8); /* Màu nền */
-  border-radius: 50%; /* Hình tròn */
-  width: 40px; /* Độ rộng của nút */
-  height: 40px; /* Độ cao của nút */
-  line-height: 40px; /* Căn giữa nội dung theo chiều dọc */
-  transition: background-color 0.3s; /* Hiệu ứng khi hover */
-}
-
-.exercise-container ul li a.account-icon:hover {
-  background-color: rgba(211, 211, 211, 0.5); /* Hiệu ứng hover màu trắng xám */
-}
-
-.content-container{
-  position: fixed; /* Đặt vị trí cố định */
-  left: 0;
-  top: 0;
-  width: 200px; /* Chiều rộng thanh bên trái */
-  height: 100vh; /* Chiều cao 100% */
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 20px;
-  border-right: 5px solid #d3d3d3; /* Đường viền bên phải thanh */
-  z-index: 10; /* Đảm bảo thanh nằm trên cùng */
-}
-
-.content-containerul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1; /* Cho phép danh sách mở rộng để chiếm không gian */
-}
-
-.content-container ul li {
-  margin: 0;
-}
-
-.content-containerul li a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 15px 20px;
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.content-container ul li a:hover {
-  background-color: rgba(211, 211, 211, 0.5); /* Hiệu ứng khi hover */
-}
-
-.main-content {
-  margin-left: 220px; /* Đẩy nội dung chính sang bên phải để tránh che bởi sidebar */
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  height: 100%; /* Đảm bảo chiều cao 100% */
-}
-
-.content-container ul li a.account-icon {
-  font-size: 25px; /* Kích thước chữ lớn hơn cho biểu tượng */
-  text-align: center; /* Căn giữa nội dung */ 
-  padding: 10px; /* Khoảng cách xung quanh */
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  color: #ffffff; /* Màu chữ */
-  background-color: rgba(30, 30, 30, 0.8); /* Màu nền */
-  border-radius: 50%; /* Hình tròn */
-  width: 40px; /* Độ rộng của nút */
-  height: 40px; /* Độ cao của nút */
-  line-height: 40px; /* Căn giữa nội dung theo chiều dọc */
-  transition: background-color 0.3s; /* Hiệu ứng khi hover */
-}
-
-.content-container ul li a.account-icon:hover {
-  background-color: rgba(211, 211, 211, 0.5); /* Hiệu ứng hover màu trắng xám */
-}
-
-textarea {
-  width: 100%;
-  padding: 10px;
-  font-family: monospace;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical; /* Cho phép thay đổi chiều cao */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .modal {
-  display: none; /* Ẩn modal mặc định */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4); /* Màu nền với độ trong suốt */
+    width: 1200px; /* Increased width for a bigger page */
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content {
-  background-color: black;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px; /* Increased padding */
+    font-size: 26px; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.close-icon {
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 15px; /* Space between text and icon */
+    font-size: 15px; /* Adjust size as needed */
+    color: #333; /* Change color as needed */
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.form-container {
+    max-width: 100%; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.container {
+    padding: 40px; /* Increased padding */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 25px; /* Increased gap between cards */
 }
 
-th, td {
-  border: 1px solid black;
-  padding: 8px;
+.card {
+    padding: 25px; /* Increased padding */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
 }
 
-th {
-  background-color: gray;
+.card h2 {
+    font-size: 20px; /* Increased font size */
+    font-weight: bold;
+    color: #333;
 }
 
-pre {
-  background-color: grey;
-  padding: 10px;
-  overflow: auto;
-  white-space: pre-wrap; /* Giữ nguyên định dạng mã */
+.card-image {
+    width: 150px; /* Set desired width */
+    height: 150px; /* Set desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    display: block;
+    margin: 0 auto; /* Center the images */
 }
 
-.completed-exercises-container { 
-  background-color: #444;
+.badge {
+    background-color: #6c757d;
+    color: white;
+    padding: 6px 10px; /* Increased padding */
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size */
+    margin-left: 5px;
 }
 
-.back-container {
-  display: flex;               /* Sử dụng Flexbox */
-  justify-content: center;     /* Căn giữa theo chiều ngang */
-  margin: 20px 0;             /* Thêm khoảng cách phía trên và dưới nếu cần */
+p {
+    color: #666;
+    font-size: 18px; /* Increased font size */
 }
 
-.back-icon {
-  color: white;                /* Màu chữ trắng */
-  text-decoration: none;       /* Loại bỏ gạch chân */
-  padding: 10px;               /* Thêm khoảng cách xung quanh */
-  margin-top: 100px; /* Khoảng cách từ nút trên */
-  background-color: black;   /* Màu nền */
-  border-radius: 5px;         /* Bo tròn góc */
-  display: flex;               /* Để căn giữa biểu tượng */
-  align-items: center;         /* Căn giữa theo chiều dọc */
+button {
+    margin-top: 15px;
+    padding: 10px 15px; /* Increased padding */
+    font-size: 16px; /* Increased font size */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.back-icon:hover {
-  background-color: gray; /* Màu nền khi di chuột qua */
+.continue-button {
+    color: white; /* White text color */
+    background-color: #007bff; /* Blue background color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 4px; /* Optional: round the edges */
+    cursor: pointer;
 }
 
-.back-container {
-  display: flex;               /* Sử dụng Flexbox */
-  justify-content: center;     /* Căn giữa theo chiều ngang */
-  margin: 20px 0;             /* Thêm khoảng cách phía trên và dưới nếu cần */
+.continue-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-.back-icon {
-  color: white;                /* Màu chữ trắng */
-  text-decoration: none;       /* Loại bỏ gạch chân */
-  padding: 10px;               /* Thêm khoảng cách xung quanh */
-  background-color: black;   /* Màu nền */
-  border-radius: 20px;         /* Bo tròn góc */
-  display: flex;               /* Để căn giữa biểu tượng */
-  align-items: center;         /* Căn giữa theo chiều dọc */
+.input {
+    width: 100%; /* Full width of container */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; /* Prevent padding from increasing width */
 }
 
-.back-icon:hover {
-  background-color: gray; /* Màu nền khi di chuột qua */
-}
-.exercise-item {
-  color: white;               /* Màu chữ trắng */
-  text-align: center; /* Căn giữa nội dung */ 
-  text-decoration: none;      /* Loại bỏ gạch chân */
-  margin-top: 20px;        /* Thêm khoảng cách phía dưới cho mỗi bài tập */
-}
-.exercise-item:hover {
-  color: #d3d3d3;            /* Thay đổi màu khi di chuột qua (màu cam) */
-}
-
-.three-dots-container {
-  display: flex;               /* Sử dụng Flexbox */
-  justify-content: center;     /* Căn giữa theo chiều ngang */
-  margin: 20px 40px;             /* Thêm khoảng cách phía trên và dưới nếu cần */
+.open-ide {
+    position: relative;
+    color: white;
+    background-color: #2b3a42; /* Use your dark blue-gray color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; /* Change to flex to align items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 8px; /* Space between text and icon */
 }
 
-.account-icon { 
-  color: white;                /* Màu chữ trắng */
-  text-decoration: none;       /* Loại bỏ gạch chân */
-  padding: 20px;               /* Thêm khoảng cách xung quanh */
-  margin-top: 55px; 
-  background-color: black;   /* Màu nền */
-  border-radius: 50px;         /* Bo tròn góc */
-  display: flex;               /* Để căn giữa biểu tượng */
-  align-items: center;         /* Căn giữa theo chiều dọc */
+/* Add the arrow icon as a pseudo-element */
+.open-ide::after {
+    content: "➔"; /* Right arrow Unicode character */
+    font-size: 1.2em;
+    color: white; /* Same color as button text */
 }
 
-.ranking-container {
-  padding: 20px;
+.card-image {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 10px;
 }
 
-.ranking-container {
-  width: 500px;
-  height: 100%;
-  margin-top: 300px; 
-  overflow: auto;
-  background-color: white;
-  background-color: rgba(0,0,0,0.4); /* Màu nền với độ trong suốt */
+.description-row {
+    display: flex;
+    align-items: center; /* Center-aligns items vertically */
+    gap: 10px; /* Adds space between the text and input field */
+}
+
+.frame {
+    padding: 15px;
+    border: 1px solid #ced4da; /* Light border to create a frame effect */
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Light background color */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field, .description-row {
+    display: flex;
+    align-items: center;
+    color: gray;
+    gap: 10px;
+}
+
+.select {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.short-description {
+    flex-shrink: 0;
+    font-size: 0.9em; /* Make the text slightly smaller */
+    color: #6c757d; /* Gray color */
+}
+
+
+.description-input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+}
+
+
+.guide-button {
+    color: grey; /* Grey text color */
+    border: 1px solid grey; /* Grey border */
+    background-color: transparent; /* Transparent background */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 4px; /* Optional: round the edges */
+    cursor: pointer;
+}
+
+.guide-button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/* Responsive điều chỉnh cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%; /* Chiều rộng modal 90% trên di động */
+        margin: 20px auto; /* Khoảng cách trên và dưới giảm */
+    }
+
+    .header {
+        font-size: 20px; /* Giảm kích thước font cho header */
+        padding: 15px; /* Giảm padding cho header */
+    }
+
+    .container {
+        padding: 20px; /* Giảm padding cho container */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột trên màn hình nhỏ */
+    }
+
+    .card {
+        padding: 15px; /* Giảm padding cho card */
+    }
+
+    .card h2 {
+        font-size: 18px; /* Giảm kích thước font cho tiêu đề trong card */
+    }
+
+    .badge {
+        font-size: 14px; /* Giảm kích thước font cho badge */
+    }
+
+    p {
+        font-size: 16px; /* Giảm kích thước font cho đoạn văn */
+    }
+
+    .input, .select, .description-input {
+        padding: 8px; /* Giảm padding cho các trường input */
+    }
+
+    button {
+        font-size: 14px; /* Giảm kích thước font cho nút bấm */
+    }
+
+    .open-ide {
+        font-size: 14px; /* Giảm kích thước font cho nút mở IDE */
+    }
+
+    .description-row {
+        flex-direction: column; /* Đặt chiều dọc cho hàng mô tả */
+    }
+
+    .field {
+        flex-direction: column; /* Đặt chiều dọc cho trường */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 18px; /* Giảm kích thước font cho header trên màn hình nhỏ */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình rất nhỏ */
+    }
+
+    .card {
+        margin: 10px 0; /* Giảm khoảng cách giữa các card */
+    }
 }
 
